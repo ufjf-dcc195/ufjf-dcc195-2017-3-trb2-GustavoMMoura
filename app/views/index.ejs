@@ -10,17 +10,24 @@
 </head>
 
 <body>
-  <div class="container">
-    <h1>
-      <%=titulo%>
-    </h1>
-    <div class="list-group">
-      <% for(var i in links){ 
+  <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h1>
+            <%=titulo%>
+          </h1>
+          <h4>Menu</h4>
+          <div class="list-group">
+            <% for(var i in links){ 
          var link = links[i] %>
-        <a class="list-group-item list-group-item-action" href="/<%= link.url %>">
-          <%= link.name %>
-        </a>
-        <% } %>
+              <a class="list-group-item list-group-item-action" href="/<%= link.url %>">
+                <%= link.name %>
+              </a>
+              <% } %>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </body>
