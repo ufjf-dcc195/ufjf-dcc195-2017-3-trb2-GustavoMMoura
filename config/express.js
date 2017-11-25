@@ -10,15 +10,15 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'devel';
 
 var config = require('./config');
 
-module.exports = function(){
+module.exports = function () {
   var app = express();
-  if(process.env.NODE_ENV === 'devel'){
+  if (process.env.NODE_ENV === 'devel') {
     app.use(morgan('dev'));
     console.log(process.env.NODE_ENV);
-  } else if(process.env.NODE_ENV === 'production'){
+  } else if (process.env.NODE_ENV === 'production') {
     app.use(compression());
   }
-  app.use(bodyParser.urlencoded({extended:true}));
+  app.use(bodyParser.urlencoded({ extended: true }));
   app.use(bodyParser.json());
   app.use(methodOverride());
   app.use(session({
@@ -30,7 +30,7 @@ module.exports = function(){
   app.set('view engine', 'ejs');
 
   app.use(express.static('./public'));
-  require("../app/routes/usuario.routes")(app);
+  require("../app/routes/amigo.routes")(app);
   require("../app/routes/index.routes")(app);
   return app;
 }

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <title>
+        <%=titulo%>
+    </title>
+</head>
+
+<body>
+    <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1>
+                        <%=titulo%>
+                    </h1>
+                    <p class="text-warning">
+                        <%=menssagem%>
+                    </p>
+                    <form class="form" method="POST" action="amigo.html">
+                        <div class="form-group">
+                            <label for="amigos">Lista dos amigos para sorteio:</label>
+                            <textarea class="form-control" id="amigos" name="amigos" rows="10"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sortear</button>
+                        <a class="btn btn-light" href="/index.html">Voltar</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

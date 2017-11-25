@@ -1,5 +1,11 @@
 module.exports.indexEJS = function (req, res, next) {
-  res.render('index', { titulo: "DCC195 - Trabalho 2", links: [{ name: "Sobre", url: "sobre.html" }] });
+  res.render('index', {
+    titulo: "DCC195 - Trabalho 2",
+    links: [
+      { name: "Amigo oculto", url: "amigo.html" },
+      { name: "Sobre", url: "sobre.html" }
+    ]
+  });
 }
 
 module.exports.sobreEJS = function (req, res, next) {
@@ -10,10 +16,6 @@ module.exports.sobreEJS = function (req, res, next) {
     email: "gmmoura@ice.ufjf.br",
     curso: "Ciência da Computação"
   });
-}
-
-module.exports.listaEJS = function (req, res, next) {
-  res.render('lista', { titulo: "Lista", a: 3, b: 13 });
 }
 
 module.exports.cookiesEJS = function (req, res, next) {
