@@ -1,0 +1,46 @@
+table {
+    margin-bottom: 30px;
+}
+
+.ttt-cell {
+    width: 150px;
+    height: 150px;
+    border-color: black !important;
+    text-align:center;
+    position:relative;
+}
+
+p {
+    margin: auto !important;
+    font-size: 80px !important;
+}
+
+.jogador0:after {
+    content: "\0058";
+    color: black;    
+}
+
+
+.jogador1 {
+    border: 8px solid red;
+    height:80px;
+    width:80px;
+    margin: 0 auto;
+    -webkit-border-radius:75px;
+    -moz-border-radius:75px;
+}
+
+.ttt-number {
+    position:absolute;
+    top:0px;
+    left:5px;
+}
+
+.cell-win {
+    background-color: rgb(191, 255, 191);
+}
+
+.text-success {
+    font-size: 24px;
+    font-weight: bolder;
+}

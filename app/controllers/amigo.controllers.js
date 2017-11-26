@@ -1,5 +1,3 @@
-var Amigo = require('mongoose').model('Amigo');
-
 module.exports.amigoEJS = function (req, res, next) {
   res.render('amigo', {
     titulo: "Sorteio - Amigo oculto",

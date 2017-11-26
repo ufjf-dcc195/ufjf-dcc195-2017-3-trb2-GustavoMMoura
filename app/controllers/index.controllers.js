@@ -3,6 +3,7 @@ module.exports.indexEJS = function (req, res, next) {
     titulo: "DCC195 - Trabalho 2",
     links: [
       { name: "Amigo oculto", url: "amigo.html" },
+      { name: "Jogo da velha", url: "velha.html" },
       { name: "Sobre", url: "sobre.html" }
     ]
   });
@@ -15,16 +16,5 @@ module.exports.sobreEJS = function (req, res, next) {
     matricula: "201235015",
     email: "gmmoura@ice.ufjf.br",
     curso: "Ciência da Computação"
-  });
-}
-
-module.exports.cookiesEJS = function (req, res, next) {
-  req.session.i = req.session.i || 1;
-  req.session.ultimoAcesso = new Date();
-
-  res.render('estado', {
-    titulo: "Estado",
-    i: req.session.i++,
-    data: req.session.ultimoAcesso
   });
 }

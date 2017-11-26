@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="/css/site.css" rel="stylesheet" type="text/css">
+    <title>
+        <%=titulo%>
+    </title>
+</head>
+
+<body>
+    <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>
+                        <%=titulo%>
+                    </h1>
+                    <div class="text-warning">
+                        <%=aviso%>
+                    </div>
+                    <% if(resultado) { %>
+                        <div class="text-success">
+                            Jogador <%=parseInt(resultado.vencedor) + 1%> ganhou!
+                        </div>
+                        <% } %>
+                    <form class="form" method="POST" action="velha.html">
+                        <input type="hidden" name="vez" value="<%=vez%>" />
+                        <table class="table-bordered">
+                            <% for(var i = 0; i < 9; i++) { %>
+                                <% if (i % 3 === 0) { %>
+                                    <tr>
+                                <% } %>
+                                    <td class="ttt-cell <%= resultado && resultado.casas.includes(i) ? "cell-win" : ""%>">
+                                        <div class="ttt-number">
+                                            <%=i + 1%>
+                                        </div>
+                                        <p class="jogador<%=casas[i]%>">
+                                            <input type="hidden" name="casas[<%=i%>]" value="<%=casas[i]%>">
+                                        </p>
+                                    </td>
+                                <% if (i % 3 === 2) { %>
+                                    </tr>
+                                <% } %>
+                            <% } %>
+                        </table>
+                            <% if (!resultado) { %>
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="addon1">
+                                        Jogador <%=parseInt(vez) + 1%>
+                                    </span>
+                                    <input type="number" class="form-control col-4" placeholder="Número da casa" aria-label="Casa" name="casa" max="9" min="1" required>
+                                    <div class="input-group-btn">
+                                        <button type="submit" class="btn btn-primary">Jogar</button>
+                                    </div>
+                                </div>
+                            <% } %>
+                    </form>
+                    <div class="p-3">
+                        <a class="btn btn-primary" href="/velha.html">Reiniciar</a>
+                        <a class="btn btn-light" href="/index.html">Sair</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

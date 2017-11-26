@@ -1,12 +1,12 @@
 {
-  "name": "expexm",
+  "name": "Trabalho2-DCC195",
   "version": "1.0.0",
-  "description": "",
+  "description": "Trabalho 2 da disciplina DCC195 do curso de Ciência da Computação da UFJF",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Gustavo Magalhães Moura",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.1",
