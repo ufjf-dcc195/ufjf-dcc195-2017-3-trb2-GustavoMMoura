@@ -20,10 +20,10 @@
                     <p class="text-warning">
                         <%=mensagem%>
                     </p>
-                    <form class="form" method="POST" action="amigo.html">
+                    <form class="form" method="POST" action="torneio.html">
                         <div class="form-group">
-                            <label for="amigos">Lista dos amigos para sorteio:</label>
-                            <textarea class="form-control" id="amigos" name="amigos" rows="10"></textarea>
+                            <label for="amigos">Lista dos 16 times:</label>
+                            <textarea class="form-control" id="times" name="times" rows="16"><%=times%></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Sortear</button>
                         <a class="btn btn-light" href="/index.html">Voltar</a>

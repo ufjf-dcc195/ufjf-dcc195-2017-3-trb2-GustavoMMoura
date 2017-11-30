@@ -2,6 +2,7 @@ module.exports.indexEJS = function (req, res, next) {
   res.render('index', {
     titulo: "DCC195 - Trabalho 2",
     links: [
+      { name: "Torneio", url: "torneio.html" },
       { name: "Amigo oculto", url: "amigo.html" },
       { name: "Jogo da velha", url: "velha.html" },
       { name: "Sobre", url: "sobre.html" }

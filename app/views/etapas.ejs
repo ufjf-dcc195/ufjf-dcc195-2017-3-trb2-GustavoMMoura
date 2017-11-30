@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="/css/site.css" rel="stylesheet" type="text/css">
+    <title>
+        <%=titulo%>
+    </title>
+</head>
+
+<body>
+    <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content">
+        <div class="container">
+            <h1>
+                <%=titulo%>
+            </h1>
+            <form class="form" method="POST" action="etapas.html">
+                <input type="hidden" name="etapasJSON" value="<%=etapasJSON%>" />
+                <table class="table table-sm table-bordered">
+                    <tr>
+                        <th>Oitavas de final</th>
+                        <th>Quartas de final</th>
+                        <th>Semifinal</th>
+                        <th>Final</th>
+                        <th>Campeão</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <%=etapas.oitavas[0] %>
+                        </td>
+                        <td rowspan="2">
+                            <%=etapas.quartas[0] %>
+                        </td>
+                        <td rowspan="4">
+                            <%=etapas.semi[0] %>
+                        </td>
+                        <td rowspan="8">
+                            <%=etapas.final[0] %>
+                        </td>
+                        <td rowspan="16">
+                            <%=etapas.campeao %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <%=etapas.oitavas[1] %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <%=etapas.oitavas[2] %>
+                        </td>
+                        <td rowspan="2">
+                            <%=etapas.quartas[1] %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <%=etapas.oitavas[3] %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <%=etapas.oitavas[4] %>
+                        </td>
+                        <td rowspan="2">
+                            <%=etapas.quartas[2] %>
+                        </td>
+                        <td rowspan="4">
+                            <%=etapas.semi[1] %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <%=etapas.oitavas[5] %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <%=etapas.oitavas[6] %>
+                        </td>
+                        <td rowspan="2">
+                            <%=etapas.quartas[3] %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <%=etapas.oitavas[7] %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <%=etapas.oitavas[8] %>
+                        </td>
+                        <td rowspan="2">
+                            <%=etapas.quartas[4] %>
+                        </td>
+                        <td rowspan="4">
+                            <%=etapas.semi[2] %>
+                        </td>
+                        <td rowspan="8">
+                            <%=etapas.final[1] %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <%=etapas.oitavas[9] %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <%=etapas.oitavas[10] %>
+                        </td>
+                        <td rowspan="2">
+                            <%=etapas.quartas[5] %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <%=etapas.oitavas[11] %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <%=etapas.oitavas[12] %>
+                        </td>
+                        <td rowspan="2">
+                            <%=etapas.quartas[6] %>
+                        </td>
+                        <td rowspan="4">
+                            <%=etapas.semi[3] %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <%=etapas.oitavas[13] %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <%=etapas.oitavas[14] %>
+                        </td>
+                        <td rowspan="2">
+                            <%=etapas.quartas[7] %>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <%=etapas.oitavas[15] %>
+                        </td>
+                    </tr>
+                </table>
+
+
+                <% if(etapas.campeao == "") {%>
+                    <button type="submit" class="btn btn-primary">Próxima etapa</button>
+                    <% } %>
+                        <a class="btn btn-light" href="/index.html">Voltar</a>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -30,6 +30,7 @@ module.exports = function () {
   app.set('view engine', 'ejs');
 
   app.use(express.static('./public'));
+  require("../app/routes/torneio.routes")(app);
   require("../app/routes/velha.routes")(app);
   require("../app/routes/amigo.routes")(app);
   require("../app/routes/index.routes")(app);
